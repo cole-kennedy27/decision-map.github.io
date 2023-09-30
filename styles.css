@@ -1,5 +1,14 @@
+@keyframes scaleIn {
+    from {
+        transform:scale(0.9); 
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 body {
-    background-color: #f2f2f2;
+    background-color: #000000;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -9,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +27,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
 }
-
 
 .video-container {
     position: fixed;
@@ -38,6 +47,19 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -2;
 }
 
+/* overlay for when the video hasn't loaded */
+.black-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* regular overlay to ensure white text visible over video */
 .overlay {
     position: fixed;
     height: 100vh;
@@ -46,12 +68,10 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.75);
     pointer-events: none;
     z-index: -1;
 }
-
-/* Existing CSS */
 
 .content {
     position: absolute;
@@ -65,7 +85,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     z-index: 1;
     padding: 50px;
-    min-height: 300px;
+    min-height: 350px;
+    animation: scaleIn 1s ease-out forwards;
 }
 
 .content .centered {
@@ -74,16 +95,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title {
-    font-size: 4em; /* Set the size of the title */
-    font-weight: bold; /* Make the title bold */
-    color: #ffffff; /* Set the color of the title */
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+    font-size: 4em; 
+    font-weight: bold; 
+    color: #ffffff; 
 }
 
 p {
-    font-size: 1.5em; /* Set the size of the paragraph */
-    color: #ffffff; /* Set the color of the paragraph */
-    margin: 10px 0 35px 0; /* Add some margin to the paragraph */
+    font-size: 1.5em; 
+    color: #ffffff; 
+    margin: 10px 0 35px 0;
 }
 
 .btn {
@@ -103,11 +123,83 @@ p {
     color: #000000;
 }
 
-
 .btn:hover {
     background-color: #8ECDDD;
     transform: scale(1.05); 
     cursor: pointer;
 }
 
+.appbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
 
+.menu-icon {
+    cursor: pointer;
+    display: block;
+}
+
+.menu-icon:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+.menu-icon .bar {
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: white;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #161616;
+    z-index: 900;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.drawer a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.drawer .header {
+    padding: 0px 15px 0 15px;
+    margin-bottom: 10px;
+    color: #FFCC70;
+    /* poppins, bold */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.drawer a:hover {
+    background-color: #575757;
+}
+
+.logo {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 40px; 
+}

@@ -11,6 +11,7 @@
 
     <!-- video -->
     <div class="video-container">
+        <div class="black-overlay"></div>
         <video autoplay loop muted id="background-video">
             <source src="assets/neuro_stock_footage.mp4" type="video/mp4" />
         </video>
@@ -23,31 +24,29 @@
     <div class="content">
         <div class="centered">
             <h1 class="title">DECISION-MAP</h1>
-            <p>Mapping evidence on mental health and addictions treatments for people with brain injury.</p>
+            <p>Mapping evidence on mental health and addictions treatments for people with brain injuries.</p>
             <div class="btn">
-                <a href="#">View the tool</a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">View the map</a>
             </div>
         </div>
     </div>
 
-    <script>
-        function setVideoDimensions() {
-            const video = document.getElementById('background-video');
-            const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-            const videoAspect = video.videoWidth / video.videoHeight;
-
-            if (viewportWidth / viewportHeight < videoAspect) {
-                video.style.width = 'auto';
-                video.style.height = '100vh';
-            } else {
-                video.style.width = '100vw';
-                video.style.height = 'auto';
-            }
-        }
-
-        window.addEventListener('resize', setVideoDimensions);
-        window.addEventListener('load', setVideoDimensions);
-    </script>
+    <!-- sticky appbar and side drawer -->
+    <div class="appbar">
+        <div class="menu-icon" onclick="toggleDrawer()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="/"><img src="assets/logo.png" alt="logo" class="logo"/></a>
+    </div>
+    <div class="drawer">
+        <p class="header">Directory</p>
+        <a href="https://google.com">Use the map</a>
+        <a href="https://google.com">About</a>
+        <a href="https://google.com">The team</a>
+        <a href="https://google.com">Contact</a>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
