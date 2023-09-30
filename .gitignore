@@ -1,0 +1,11 @@
+# env secrets
+.env
+
+# apple go brr
+.DS_Store
+
+# vs code configs
+.vscode
+
+# node modules
+node_modules
