@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>DECISION-MAP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- html h1 header with some tailwind css stuff -->
-    <div class="flex flex-col items-center justify-center h-screen">
-        <h1 class="text-6xl font-bold text-center text-gray-900">DECISION-MAP</h1>
-        <h2 class="text-2xl font-bold text-center text-gray-900">A tool for visualizing evidence</h2>
-        <h3 class="text-xl font-bold text-center text-gray-900">A project by the <a href="https://www.cs.ubc.ca/~kevinlb/">UBC InfoVis Group</a></h3>
+
+    <!-- video -->
+    <div class="video-container">
+        <video autoplay loop muted id="background-video">
+            <source src="assets/neuro_stock_footage.mp4" type="video/mp4" />
+        </video>
     </div>
-    <!-- sticky appbar (sandwich icon, title, button) -->
 
-    <!-- drawer that slides in from the left -->
+    <!-- colored black video overlay -->
+    <div class="overlay"></div>
 
-    <!-- background video for the first banner page -->
+    <!-- main content -->
+    <div class="content">
+        <div class="centered">
+            <h1 class="title">DECISION-MAP</h1>
+            <p>Mapping evidence on mental health and addictions treatments for people with brain injury.</p>
+            <div class="btn">
+                <a href="#">View the tool</a>
+            </div>
+        </div>
+    </div>
 
-    <!-- (pp. 2) little tree diagram page: "introducing decision-map..." -->
+    <script>
+        function setVideoDimensions() {
+            const video = document.getElementById('background-video');
+            const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            const videoAspect = video.videoWidth / video.videoHeight;
 
-    <!-- (pp. 4) "interactive evidence map user interface" -->
+            if (viewportWidth / viewportHeight < videoAspect) {
+                video.style.width = 'auto';
+                video.style.height = '100vh';
+            } else {
+                video.style.width = '100vw';
+                video.style.height = 'auto';
+            }
+        }
 
-    <!-- (pp. 5) some video thing -->
-
-    <!-- (pp. 6) our sponsors -->
-    
+        window.addEventListener('resize', setVideoDimensions);
+        window.addEventListener('load', setVideoDimensions);
+    </script>
 </body>
 </html>
