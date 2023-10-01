@@ -27,5 +27,14 @@ function setVideoDimensions() {
     }
 }
 
+window.addEventListener('scroll', function() {
+    const appbar = document.getElementById('appbar');
+    if (window.scrollY > 0) { // check if the window has been scrolled
+        appbar.style.backgroundColor = '#161616'; // set the background color
+    } else {
+        appbar.style.backgroundColor = 'transparent'; // reset to transparent background
+    }
+});
+
 window.addEventListener('resize', setVideoDimensions);
 window.addEventListener('load', setVideoDimensions);
