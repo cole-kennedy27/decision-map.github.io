@@ -18,10 +18,10 @@
     </div>
 
     <!-- colored black video overlay -->
-    <div class="overlay"></div>
+    <div class="overlay" class="overlay"></div>
 
     <!-- main content -->
-    <div class="content">
+    <div class="content" id="section_1">
         <div class="centered">
             <h1 class="title">DECISION-MAP</h1>
             <p>Mapping evidence on mental health and addictions treatments for people with brain injuries.</p>
@@ -33,7 +33,7 @@
 
     <!-- sticky appbar and side drawer -->
     <div class="appbar" id="appbar">
-        <div class="menu-icon" onclick="toggleDrawer()">
+        <div id="appbar-icon" class="menu-icon" onclick="toggleDrawer()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -41,19 +41,18 @@
         <a href="/"><img src="assets/logo.png" alt="logo" class="logo"/></a>
     </div>
     <div class="drawer">
-        <a href="/"><p class="header">Home</p></a>
+        <a href="#section_1"><p class="header">Home</p></a>
         <a href="https://google.com">Use the map</a>
+        <a href="#section_2">The team</a>
         <a href="https://google.com">About</a>
-        <a href="https://google.com">The team</a>
         <a href="https://google.com">Contact</a>
     </div>
-
 
     <div class="section_2">
         <!-- section header with a title like: "meet the team" -->
     
-    <div class="section_header">
-        <h1 class="title mobile_center">Meet the team</h1>
+    <div class="section_header" id="section_2">
+        <h1 class="title mobile_center sec_2_title">Meet the team</h1>
     </div>
     
     <!-- the team headshots grid -->
@@ -189,8 +188,6 @@
         </div>
     </div>
     </div>
-    
-
     <script src="script.js"></script>
 </body>
 </html>
