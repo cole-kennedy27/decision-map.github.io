@@ -337,13 +337,14 @@ p {
 
 .text {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     display: -webkit-box;
     text-align: center;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 2; /* number of lines to show atop the overlay */
-    text-overflow: ellipsis;
+    /* -webkit-line-clamp: 2;  */
+    /* number of lines to show atop the overlay */
+    /* text-overflow: ellipsis; */
     max-width: 90%; /* max size basically */
 }
 
