@@ -2,9 +2,9 @@ document.getElementById('background-video').playbackRate = 1.5; // nx faster vid
 
 // fade out black overlay when video is playing
 document.getElementById('background-video').addEventListener('playing', function () {
-    console.log("video is playing!!");
     document.querySelector('.black-overlay').style.opacity = '0';
-});
+}, { once: true });
+
 
 function toggleDrawer() {
     const drawer = document.querySelector('.drawer');
@@ -78,12 +78,26 @@ function setVideoDimensions() {
 
 window.addEventListener('scroll', function() {
     const appbar = document.getElementById('appbar');
-    if (window.scrollY > 50) { // check if the window has been scrolled
-        appbar.style.backgroundColor = '#161616'; // set the background color
+    const videoOverlay = document.getElementById('black_overlay');
+    const meetTheTeam = document.getElementById('meet_the_team');
+    
+    // Ensure elements exist to avoid errors
+    if(!appbar || !videoOverlay || !meetTheTeam) return;
+
+    if (window.scrollY > 50) {
+        appbar.style.backgroundColor = '#161616';
     } else {
-        appbar.style.backgroundColor = 'transparent'; // reset to transparent background
+        appbar.style.backgroundColor = 'transparent';
+    }
+
+    if (window.scrollY > meetTheTeam.offsetTop ) {
+        videoOverlay.style.opacity = '0.8';
+    } else  {
+        videoOverlay.style.opacity = '0';
     }
 });
+
+
 
 window.addEventListener('resize', setVideoDimensions);
 window.addEventListener('load', setVideoDimensions);

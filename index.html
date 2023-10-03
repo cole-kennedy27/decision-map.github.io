@@ -11,7 +11,7 @@
 
     <!-- video -->
     <div class="video-container">
-        <div class="black-overlay"></div>
+        <div class="black-overlay" id="black_overlay"></div>
         <video autoplay loop muted id="background-video">
             <source src="assets/neuro_stock_footage.mp4" type="video/mp4" />
         </video>
@@ -52,7 +52,7 @@
         <!-- section header with a title like: "meet the team" -->
     
     <div class="section_header" id="section_2">
-        <h1 class="title mobile_center sec_2_title">Meet the team</h1>
+        <h1 id="meet_the_team" class="title mobile_center sec_2_title">Meet the team</h1>
     </div>
     
     <!-- the team headshots grid -->
@@ -196,73 +196,39 @@
     </div>
 
     <!-- About  start-->
-    <div>
-        <p>
-            The objective of the DECISION-MAP project is to systematically identify, organize, and visualize evidence addressing mental health and addictions interventions for people with acquired brain injury. Our mission is to provide a dynamic, interactive, and accessible platform for knowledge users to locate and engage with up-to-date research findings that can be used to aid in evidence-based decisions, such as treatment planning, program development, research agenda-setting, or resource allocation. DECISION–MAP is a hub of empirical evidence that can be accessed and evaluated by those who need it most, including people with lived experience, service providers and health care professionals, researchers, clinicians, and policy makers.
-        </p>
-    </div>
-    
+    <p>
+        The objective of the DECISION-MAP project is to systematically identify, organize, and visualize evidence addressing mental health and addictions interventions for people with acquired brain injury. Our mission is to provide a dynamic, interactive, and accessible platform for knowledge users to locate and engage with up-to-date research findings that can be used to aid in evidence-based decisions, such as treatment planning, program development, research agenda-setting, or resource allocation. DECISION–MAP is a hub of empirical evidence that can be accessed and evaluated by those who need it most, including people with lived experience, service providers and health care professionals, researchers, clinicians, and policy makers.
+    </p>
     
     <!-- Affiliates start -->
     <div>
         <h1 class="title mobile_center sec_3_title">Affiliates</h1>
     </div>
 
-    <div class = "affliates_grid">
-
-        <div class="affiliate_column">
-            <!-- <span class="subtitle">UBC</span> -->
-            <div class = "affliates_title">
-                <img src="assets/logos/UVIC.logo.png" style="background-color: white;" alt="">
-                <div class="affiliate_overlay">
-                    <div class="text">test</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="affiliate_column">
-            <!-- <span class="subtitle">UBC</span> -->
-            <div class = "affliates_title">
-                <img src="assets/logos/UBClogo.png" style="background-color: white;" alt="">
-                <div class="affiliate_overlay">
-                    <div class="text">test</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="affiliate_column">
-            <!-- <span class="subtitle">UBC</span> -->
-            <div class = "affliates_title">
-                <img src="assets/logos/CGB.logo.png" style="background-color: white;" alt="">
-                <div class="affiliate_overlay">
-                    <div class="text">test</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="affiliate_column">
-            <!-- <span class="subtitle">UBC</span> -->
-            <div class = "affliates_title">
-                <img src="assets/logos/Cridge.Logo.png" style="background-color: white;" alt="">
-                <div class="affiliate_overlay">
-                    <div class="text">test</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="affiliate_column">
-            <!-- <span class="subtitle">UBC</span> -->
-            <div class = "affliates_title">
-                <img src="assets/logos/NBIS.logo.png" style="background-color: white;" alt="">
-                <div class="affiliate_overlay">
-                    <div class="text">test</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Affiliates End -->
 
+    <!-- assets list -->
+
+    <div class="affiliates_row">
+        <div class="affiliate_item">
+            <img src="assets/logos/cgb.png" alt="">
+        </div>
+        <div class="affiliate_item">
+            <img src="assets/logos/cridge.png" alt="">
+        </div>
+        <div class="affiliate_item">
+            <img src="assets/logos/logo.jpg" alt="">
+        </div>
+        <div class="affiliate_item">
+            <img src="assets/logos/nbis.png" alt="">
+        </div>
+        <div class="affiliate_item">
+            <img src="assets/logos/ubc.png" alt="">
+        </div>
+        <div class="affiliate_item">
+            <img src="assets/logos/uvic.png" alt="">
+        </div>
+    </div>
 
     <!-- Contact us start -->
     <div class="section_header" id="section_4">
@@ -270,18 +236,16 @@
     </div>
 
     <div class="about_column">
-        <!-- <p class="about_column_title"> Cortex Lab contact info:</p> -->
         <p class="about_column_body_text"> Located in the Neuropsychology and Rehabilitation Laboratory</p>
-        <p class="about_column_body_text">Email: colekennedy@uvic.ca</p>
+        <p class="about_column_body_text">Email: <a href="mailto:colekennedy@uvic.ca">colekennedy@uvic.ca</a></p>
         <p class="about_column_body_text">Cornett Building Room A137</p>
         <p class="about_column_body_text">Mailing address: PO Box 1700 STN CSC</p>
         <p class="about_column_body_text">Victoria, British Columbia, Canada V8W 2Y2</p>
-        <p class="about_column_body_text">Phone: 250-472-5067</p>
-        <p class="about_column_body_text">Fax: 250-721-8929</p>
-        <p class="about_column_body_text">CORTEX: 250-472-4940</p>
-    </div>
+        <p class="about_column_body_text">Phone: <a href="tel:250-472-5067">250-472-5067</a></p>
+        <p class="about_column_body_text">Fax: <a href="tel:250-721-8929">250-721-8929</a></p>
+        <p class="about_column_body_text">CORTEX: <a href="tel:250-472-4940">250-472-4940</a></p>
+    </div>'
     <!-- Contact us end -->
-
 
     </div>
     <script src="script.js"></script>
