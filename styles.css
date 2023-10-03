@@ -239,14 +239,14 @@ p {
 }
 
 .about_text {
-        color: white;
-        font-size: 20px;
-        display: -webkit-box;
-        text-align: center;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        -webkit-line-clamp: 2; /* number of lines to show atop the overlay */
-        max-width: 90%; /* max size basically */
+    color: white;
+    font-size: 20px;
+    display: -webkit-box;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* number of lines to show atop the overlay */
+    max-width: 90%; /* max size basically */
 }
 
 .about_column_title {
@@ -391,6 +391,23 @@ a {
     border-radius: 5px;
     margin-top: 15px;
     box-sizing: border-box;
+}
+
+
+.btn-map {
+    margin-top: 30px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.about_bg{
+    padding: 25px;
+    margin-top: 15px;
+    background-color: #5757576e;
+    border-radius: 5px;
 }
 
 .affiliate_item {
